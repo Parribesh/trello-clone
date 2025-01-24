@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Home",
+    "route": "/dashboard/home"
+  },
+  {
+    "label": "Projects",
+    "route": "/dashboard/projects"
+  },
+  {
+    "label": "Profile",
+    "route": "/dashboard/profile"
+  },
+  {
+    "label": "Settings",
+    "route": "/dashboard/settings"
+  },
+  {
+    "label": "Logout",
+    "route": "/logout"
+  }
+]
