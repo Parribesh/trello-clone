@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, Response
-from app.db.schemas.user import User, UserInDB
+from app.schemas.project_schema import User, UserInDB, UserRequest
 from app.services.user_service import register_user
 from app.services.auth_service import create_access_token
 from app.api.dependencies import get_current_user, get_db, get_all_users
@@ -19,7 +19,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 
 @router.post("/register")
-async def register(user: User, db: Session = Depends(get_db)):
+async def register(user: UserRequest, db: Session = Depends(get_db)):
     return await register_user(user, db)
 
 

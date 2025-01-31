@@ -1,4 +1,4 @@
-from app.db.schemas.user import User
+from app.schemas.project_schema import User
 from app.db.crud import create_user, get_user_by_username
 from app.services.auth_service import create_access_token, hash_password, verify_password
 from fastapi import HTTPException, status

@@ -1,7 +1,7 @@
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from app.db.schemas.auth import TokenData
+from app.db.schemas.auth_validation import TokenData
 from fastapi import HTTPException
 
 SECRET_KEY = "secret-key"

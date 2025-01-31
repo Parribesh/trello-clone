@@ -1,10 +1,10 @@
 from fastapi.testclient import TestClient
 from app.main import app
 from app.db.database import SessionLocal, engine
-from app.models.user_model import User as DBUser
+from app.models.models import User as DBUser
 from app.db.crud import create_user, get_user_by_username
 from app.services.auth_service import hash_password, verify_password
-from app.db.schemas.user import User
+from app.db.schemas.user_validation import User
 from app.services.user_service import register_user
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
